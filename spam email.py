@@ -10,7 +10,6 @@ from nltk.stem.porter import PorterStemmer #reduce word down to stem
 
 from sklearn.feature_extraction.text import CountVectorizer #take word stem and vectorise them by counting tokens, so we have a numerical representation taht we can sub into a model
 from sklearn.model_selection import train_test_split #
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import MultinomialNB
 
 nltk.download('stopwords')

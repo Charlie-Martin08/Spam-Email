@@ -25,7 +25,7 @@ stopword_set = set(stopwords.words('english'))
 
 for i in range(len(df)):
      text = df['text'].iloc[i].lower() #takes emails and makes lowercase
-     text = text.translate(str.maketrans('','', string.punctuation)).split() #we used a third parameter here in maketrans but if you used just to e.g. maketrans('abc', 'xyz') all abc will be tunred into xyz
+     text = text.translate(str.maketrans('','', string.punctuation)).split() #we used a third parameter here in maketrans but if you used just to e.g. maketrans('abc', 'xyz') all abc will be turned into xyz
      text = [stemmer.stem(word) for word in text if word not in stopword_set]
      text = ' '.join(text)
      corpus.append(text)
